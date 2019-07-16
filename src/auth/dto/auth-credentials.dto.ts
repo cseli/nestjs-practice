@@ -9,9 +9,8 @@ export class AuthCredentialsDto {
   @IsString()
   @MinLength(8)
   @MaxLength(20)
-  @Matches(
-      /((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/,
-      {message: 'password too week'},
-      )
+  @Matches(/((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/, {
+    message: 'password too week',
+  })
   password: string;
 }
